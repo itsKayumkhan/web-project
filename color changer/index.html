@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COLOR CHANGER</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <h1 class="logo">Kayumkhan_kks</h1>
+    <div class="main">
+        <div class="click">
+            <h2 id="head"></h2>
+            <button class="cssbuttons-io" id="btn">
+                <span>Pick me</span>
+              </button>
+        <!-- <button id = "btn">New Color</button> -->
+        </div>
+    </div>
+    <script>
+        const color_Change = () => 
+        {
+            let colorCode = Math.floor(Math.random() * 16777215);
+            let color = ` #${colorCode.toString(16)}`;
+           document.body.style.backgroundColor = color;
+           document.getElementById("head").innerText = color;
+
+           navigator.clipboard.writeText(color);
+        }
+        btn.addEventListener("click", color_Change);
+
+        color_Change();
+    </script>
+</body>
+</html>

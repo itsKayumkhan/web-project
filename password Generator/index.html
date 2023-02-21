@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul class="ul-list">
+        <h1 class="logo">Kayumkhan_kks</h1>
+        <li class="list">Home</li>
+        <li class="list">Contact</li>
+        <li class="list">Social</li>
+        <li class="list">About</li>
+      </ul>
+    </nav>
+
+    <div class="main">
+      <div class="mini">
+        <div class="enter"><span id="tet"></span></div>
+
+        <div class="first box">
+          <h2 class="len">Range</h2>
+          <input type="number" name="pass" id="length" />
+        </div>
+
+        <div class="thi box">
+          <h2 class="Upper">Upper Case</h2>
+          <input type="checkbox" name="Upper" id="Upper" />
+        </div>
+
+        <div class="four box">
+          <h2 class="lower">Lower Case</h2>
+          <input type="checkbox" name="lower" id="lower" />
+        </div>
+
+        <div class="five box">
+          <h2 class="Number">Number</h2>
+          <input type="checkbox" name="Number" id="Number" />
+        </div>
+
+        <div class="six box">
+          <h2 class="Symbol">symbol</h2>
+          <input type="checkbox" name="Symbol" id="Symbol" />
+        </div>
+        <div class="btn"><button id="click">Generate</button></div>
+      </div>
+    </div>
+
+    <!-- ////*****************JAVA SCRIPT******************************* -->
+    <script>
+      let symbols = " !@#$%^&*()";
+      let LowerCase = "abcdefghijklmnopqrstuvwxyz";
+      let Uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      let Numbers = "0123456789";
+
+      let s = document.getElementById("Symbol");
+      let l = document.getElementById("lower");
+      let u = document.getElementById("Upper");
+      let n = document.getElementById("Number");
+
+      let passw = document.getElementById("tet");
+      let r = document.getElementById("length");
+
+      const generate = (data) => {
+        return data[Math.floor(Math.random() * data.length)];
+      };
+
+      const pass = (password = "") => {
+        if (l.checked) {
+          password += generate(LowerCase);
+        }
+        if (u.checked) {
+          password += generate(Uppercase);
+        }
+        if (n.checked) {
+          password += generate(Numbers);
+        }
+        if (s.checked) {
+          password += generate(symbols);
+        }
+
+        if (password.length < r.value) {
+          return pass(password);
+        }
+    //  console.log(password);
+    passw.innerText = split(password,r.value);
+      };
+      document.getElementById("click").addEventListener("click", 
+      function () {
+        pass();
+      });
+
+      const split = (str,num) =>
+      {
+          if(str.length > num)
+          {
+            let substr = str.substring(0,num);
+            return substr;
+          }
+          else
+          {
+            return str;
+          }
+      }
+
+
+      pass();
+    </script>
+  </body>
+</html>

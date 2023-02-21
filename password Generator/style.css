@@ -1,0 +1,110 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Itim&family=Josefin+Sans:ital,wght@1,600&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+    font-family: 'Josefin Sans', sans-serif;
+}
+body{
+    overflow: hidden;
+    background-color: cornflowerblue;
+}
+.ul-list
+{    display: flex;
+    padding: 0rem 2rem;
+    background-color: rgb(67, 127, 239);
+    font-size: 1.6rem;
+    font-family: 'Itim', cursive;
+}
+.list{
+    color: aliceblue;
+    list-style: none;
+    padding: 10px;
+}
+.main
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
+    
+}
+.mini
+{    display: flex;
+    padding: 31px;
+    background: #fff;
+    border-radius: 11px;
+    width: 34vw;
+    flex-direction: column;
+    box-shadow: 2px 13px 34px -5px;
+}
+
+.box
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0px;
+    flex-wrap: wrap;
+
+}
+#tet
+{    display: flex;
+    height: 3rem;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 7px;
+    color: blue;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+    font-weight: 700;
+    border: solid black;
+
+}
+.logo
+{font-size: 2rem;
+    color: aliceblue;
+    width: 83rem;
+    line-height: 2;
+    font-weight: 800;
+
+}
+#length{
+    width: 40%;
+    font-size: 1.2rem;
+    padding: 0 10px;
+}
+input
+{
+    border-radius: 5px;
+    border-block-start-color: aquamarine;
+}
+
+.btn
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#click
+{
+        font-size: 1.7rem;
+    margin: 12px 0;
+    padding: 10px;
+    border-radius: 12px;
+}
+#click:hover{
+    font-size: 2rem;
+    transition:all .7s;
+    background: cornflowerblue;
+    color: #fff;
+    transform: translate(-1px, 2px);
+    box-shadow: 2px 13px 34px -14px black;
+}
